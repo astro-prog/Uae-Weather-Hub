@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAE Weather Hub - Real-Time</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="home-page">
+            <div class="clouds">
+                <div class="cloud cloud1"></div>
+                <div class="cloud cloud2"></div>
+            </div>
+            <div class="container">
+                <h1>🌤️ UAE Weather Hub</h1>
+                <div class="greeting">
+                    Hello! How are you today? <span class="emoji">😊</span>
+                </div>
+                <div class="button-container">
+                    <button class="main-button" onclick="showPage('location')">
+                        📍 Select Location
+                    </button>
+                    <button class="main-button" onclick="showPage('weather')">
+                        ⚠️ Current Weather Alerts
+                    </button>
+                    <button class="main-button" onclick="showPage('forecast')">
+                        📅 7-Day Weather Forecast
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Page -->
+    <div id="location" class="page">
+        <div class="home-page">
+            <div class="clouds">
+                <div class="cloud cloud1"></div>
+                <div class="cloud cloud2"></div>
+            </div>
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <div class="location-container">
+                    <h2>🏙️ Select Your City</h2>
+                    <div class="city-selector">
+                        <select id="citySelect" onchange="showCityWeather()">
+                            <option value="">Choose a city...</option>
+                            <option value="dubai">Dubai</option>
+                            <option value="abudhabi">Abu Dhabi</option>
+                            <option value="sharjah">Sharjah</option>
+                            <option value="ajman">Ajman</option>
+                            <option value="fujairah">Fujairah</option>
+                            <option value="rasalkhaimah">Ras Al Khaimah</option>
+                            <option value="ummalquwain">Umm Al Quwain</option>
+                        </select>
+                    </div>
+                    <div id="cityWeatherInfo" class="weather-info" style="display: none;">
+                        <div id="cityName"></div>
+                        <div id="cityTemp" class="temperature"></div>
+                        <div id="cityDescription"></div>
+                        <div id="weatherDetails" class="weather-details"></div>
+                        <div class="last-updated" id="lastUpdated"></div>
+                        <button class="refresh-button" onclick="refreshWeatherData()">🔄 Refresh Data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weather Alerts Page -->
+    <div id="weather" class="page">
+        <div class="weather-page">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <div class="weather-alert">
+                    <h2>⚠️ Weather Alerts & Safety</h2>
+                    <div id="weatherAlertContent">
+                        <div class="loading"></div>
+                        <p>Loading current weather conditions...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forecast Page -->
+    <div id="forecast" class="page">
+        <div class="forecast-page-sunny">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h2 style="text-align: center; margin-bottom: 30px; color: #2C3E50;">📅 7-Day Weather Forecast</h2>
+                <div id="forecastContainer" class="forecast-container">
+                    <div class="loading" style="margin: 50px auto;"></div>
+                    <p style="text-align: center; margin-top: 20px;">Loading forecast data...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
