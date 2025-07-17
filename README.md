@@ -54,13 +54,11 @@ A simple web app that shows current weather and forecasts for cities across the 
 
      ```bash
      npx http-server .
-     ```
-
-
+     
 
 ## 🙌 Author
 
 Made with &hearts; by @astro-prog
 
-```
+
 
