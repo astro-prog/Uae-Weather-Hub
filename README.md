@@ -58,7 +58,7 @@ A simple web app that shows current weather and forecasts for cities across the 
 
 ## 🙌 Author
 
-Made with &hearts; by @astro-prog
+Built with ❤️ by [**@astro-prog**](https://github.com/astro-prog)
 
 
 
