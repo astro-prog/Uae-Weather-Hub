@@ -5,6 +5,8 @@ Sure! Here's a **simplified and informative README.md** for your **UAE Weather H
 # Website
 [UAE weather web app](file:///C:/Users/Hp/Desktop/PROGS/PROJECTS/uae_weather_app.html)
 
+---
+
 ````markdown
 # 🌤️ UAE Weather Hub
 
